@@ -185,3 +185,24 @@
     color: #FFF;
     padding: 16px;
 }
+
+
+/* General component styles */
+.btn {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn--about {
+    margin-top: 3rem;
+}
+
+.btn--about:hover {
+    scale: 1.05;
+    transition: 1ms ease-in-out;
+}

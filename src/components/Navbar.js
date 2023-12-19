@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import Dropdown from './Dropdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/components.styles.css';
 
 export default function Navbar() {
@@ -38,7 +39,8 @@ export default function Navbar() {
 
                 {/* Hamburger button (mobile screens only) */}
                 <div className='navbar__hamburger' onClick={handleNavMenuClick}>
-                    <i className={isNavMenuOpen ? 'fas fa-times' : 'fas fa-bars'} />
+                    {/* <i className={ isNavMenuOpen ? 'fas fa-times fa-solid' : 'fas fa-bars fa-solid' } /> */}
+                    <FontAwesomeIcon icon={ isNavMenuOpen ? 'times' : 'bars'} />
                 </div>
 
                 {/* Menu items */}
@@ -50,7 +52,7 @@ export default function Navbar() {
                         <Link className='navbar__link' smooth='true' to="/#about" onClick={closeMobileMenu}>About</Link>
                     </li>
                     <li className='navbar__item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                        <Link className='navbar__link' smooth='true' to="/#projects" onClick={closeMobileMenu}>Projects <i className='fas fa-caret-down' /></Link>
+                        <Link className='navbar__link' smooth='true' to="/#projects" onClick={closeMobileMenu}>Projects <FontAwesomeIcon icon="caret-down" /></Link>
                         {isNavDropdownShowing && <Dropdown />}
                     </li>
                     <li className='navbar__item'>
